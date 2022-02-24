@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PetController : MonoBehaviour
 {
-    public float speed = 100f;
+    public player pet;
     public Transform [] target;
     bool isMove;
-    float moveTimer=3f;
-    float stopTime;
+    public float moveTimer;
+    public float stopTime;
     Animator anim;
     void Start()
     {
@@ -27,16 +27,19 @@ public class PetController : MonoBehaviour
         }
         else
         {
-            Move();
+            Moveto();
             moveTimer = stopTime;
+            
+            
         }
         anim.SetBool("isMove", isMove);
-        transform.LookAt(transform.forward);
+        
     }
-    void Move()
+    void Moveto()
     {
-        int point = Random.Range(0, target.Length);
-        transform.position = Vector3.MoveTowards(transform.position, target[point].position, speed * Time.deltaTime);
+        int randomPoint1 = Random.Range(-4, 4);
+        int randomPoint2 = Random.Range(0, 3);
+        pet.Move(new Vector3(randomPoint1,0,randomPoint2));
         isMove = true;
     }
 }
