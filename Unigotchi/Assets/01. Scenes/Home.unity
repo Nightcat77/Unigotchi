@@ -645,7 +645,7 @@ MonoBehaviour:
   - {fileID: 747906001}
   - {fileID: 557156302}
   - {fileID: 343225666}
-  moveTimer: 3
+  moveTimer: 10
   stopTime: 0
 --- !u!1 &963194225
 GameObject:
@@ -1240,6 +1240,14 @@ PrefabInstance:
     - target: {fileID: 6838384326079434080, guid: 7b6002b46ab675940b1fe28ef7d7b042, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838384326081334168, guid: 7b6002b46ab675940b1fe28ef7d7b042, type: 3}
+      propertyPath: isGUI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6838384326081443854, guid: 7b6002b46ab675940b1fe28ef7d7b042, type: 3}
+      propertyPath: isGUI
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6002b46ab675940b1fe28ef7d7b042, type: 3}
