@@ -22,10 +22,14 @@ public class player : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
             transform.LookAt(transform.position + destination);
-            isMove=true;
+            isMove = true;
         }
         else
-            isMove=false;
+        {
+            isMove = false;
+            transform.LookAt(new Vector3(0,0,-1));
+        }
+            
 
         anim.SetBool("isMove", isMove);
         

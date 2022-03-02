@@ -5,7 +5,6 @@ using UnityEngine;
 public class PetController : MonoBehaviour
 {
     public player pet;
-    public Transform [] target;
     
     public float moveTimer;
     public float stopTime;
@@ -37,9 +36,13 @@ public class PetController : MonoBehaviour
     }
     void Moveto()
     {
-        int randomPoint1 = Random.Range(-4, 4);
+        int randomPoint1 = Random.Range(-3, 3);
         int randomPoint2 = Random.Range(0, 3);
         pet.Move(new Vector3(randomPoint1,0,randomPoint2));
         
+    }
+    public static void Die()
+    {
+
     }
 }
