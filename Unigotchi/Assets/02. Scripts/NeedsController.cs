@@ -27,23 +27,26 @@ public class NeedsController : MonoBehaviour
         food += amount;
         if (food < 0)
         {
-            PetController.Die();
+            PetController.instance.Die();
         }
+        else if (food > 100) food = 100;
     }
     public void ChangeHappiness(int amount)
     {
         happiness += amount;
         if (happiness < 0)
         {
-            PetController.Die();
+            PetController.instance.Die();
         }
+        else if (happiness > 100) happiness = 100;
     }
     public  void ChangeEnergy(int amount)
     {
         energy += amount;
         if (energy < 0)
         {
-            PetController.Die();
+            PetController.instance.Die();
         }
+        else if (energy > 100) energy = 100;
     }
 }

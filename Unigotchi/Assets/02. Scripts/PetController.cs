@@ -5,10 +5,20 @@ using UnityEngine;
 public class PetController : MonoBehaviour
 {
     public player pet;
-    
+    public NeedsController needsController;
     public float moveTimer;
     public float stopTime;
     Animator anim;
+
+    public static PetController instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else Debug.LogWarning("More than one Petcontroller in the Scene");
+    }
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -41,8 +51,8 @@ public class PetController : MonoBehaviour
         pet.Move(new Vector3(randomPoint1,0,randomPoint2));
         
     }
-    public static void Die()
+    public void Die()
     {
-
+        Debug.Log("Dead");
     }
 }

@@ -5331,9 +5331,10 @@ GameObject:
   - component: {fileID: 6838384326081334164}
   - component: {fileID: 6838384326081334168}
   - component: {fileID: 6838384326081443854}
+  - component: {fileID: 926130891}
   m_Layer: 0
   m_Name: UnityChan
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5482,7 +5483,7 @@ MonoBehaviour:
   interval: 5
   windPower: 1
   gravity: 0.98
-  isGUI: 1
+  isGUI: 0
 --- !u!114 &6838384326081443854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5502,7 +5503,20 @@ MonoBehaviour:
   headWeight: 0.8
   eyesWeight: 1
   clampWeight: 0.5
-  isGUI: 1
+  isGUI: 0
+--- !u!114 &926130891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6838384326070058920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6ff8f2dfb433745a1c04259b85cd53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &6838384326070058922
 GameObject:
   m_ObjectHideFlags: 0
